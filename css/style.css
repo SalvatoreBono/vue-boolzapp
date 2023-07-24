@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(217, 219, 213);
+}
+
+.bg-boolzapp {
+    background-color: rgb(0, 150, 136);
+    height: 120px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.custom-block {
+    position: relative;
+    height: 850px;
+}
+
+.avatar {
+    width: 55px;
+    border-radius: 50%;
+}
+
+.bg-profile {
+    background-color: rgb(234, 234, 234);
+}
+
+.bg-notifications {
+    background-color: rgb(142, 218, 252);
+}
+
+.notifications {
+    width: 45px;
+    height: 45px;
+}
+
+.info-profile {
+    font-size: 0.8rem;
+}
+
+.hover-bg-grey:hover {
+    background-color: rgb(233, 235, 235);
+    transition: 0.5s;
+}
+
+.message-area {
+    background-image: url(../img/mine.jpg);
+}
+
+.received {
+    background-color: rgb(213, 249, 186);
+    margin-right: 25px;
+}
+
+.time {
+    text-align: end;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.message {
+    padding-top: 0.5rem;
+    padding-left: 0.8rem;
+    padding-bottom: 0.3rem;
+    padding-right: 0.3rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    min-width: 35%;
+}
+
+.send {
+    background-color: white;
+    margin-left: 25px;
+
+}
+
+.text-area {
+    background-color: rgb(243, 238, 234);
+}
