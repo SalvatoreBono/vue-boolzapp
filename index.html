@@ -91,97 +91,19 @@
             </div>
           </div>
           <div class="overflow-auto flex-grow-1 flex-column">
+            <!-- Ciclare i contatti con il v-for -->
             <div
+              v-for="(singleContact, i) in contatti"
               class="d-flex justify-content-between hover-bg-grey pt-2 pb-2 pe-3 ps-3"
             >
               <div class="d-flex">
-                <img class="avatar" src="img/avatar_1.jpg" alt="" />
+                <img
+                  class="avatar"
+                  :src="`img/avatar${singleContact.avatar}.jpg`"
+                  alt=""
+                />
                 <div class="ps-4">
-                  <div>Michele</div>
-                  <div class="text-secondary info-profile">
-                    Ultimo messaggio inviato
-                  </div>
-                </div>
-              </div>
-              <div class="text-secondary info-profile">12:00</div>
-            </div>
-            <div class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3">
-              <div class="d-flex">
-                <img class="avatar" src="img/avatar_2.jpg" alt="" />
-                <div class="ps-4">
-                  <div>Fabio</div>
-                  <div class="text-secondary info-profile">
-                    Ultimo messaggio inviato
-                  </div>
-                </div>
-              </div>
-              <div class="text-secondary info-profile">12:00</div>
-            </div>
-            <div class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3">
-              <div class="d-flex">
-                <img class="avatar" src="img/avatar_3.jpg" alt="" />
-                <div class="ps-4">
-                  <div>Samuele</div>
-                  <div class="text-secondary info-profile">
-                    Ultimo messaggio inviato
-                  </div>
-                </div>
-              </div>
-              <div class="text-secondary info-profile">12:00</div>
-            </div>
-            <div class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3">
-              <div class="d-flex">
-                <img class="avatar" src="img/avatar_4.jpg" alt="" />
-                <div class="ps-4">
-                  <div>Alessandro B.</div>
-                  <div class="text-secondary info-profile">
-                    Ultimo messaggio inviato
-                  </div>
-                </div>
-              </div>
-              <div class="text-secondary info-profile">12:00</div>
-            </div>
-            <div class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3">
-              <div class="d-flex">
-                <img class="avatar" src="img/avatar_5.jpg" alt="" />
-                <div class="ps-4">
-                  <div>Alessandro L.</div>
-                  <div class="text-secondary info-profile">
-                    Ultimo messaggio inviato
-                  </div>
-                </div>
-              </div>
-              <div class="text-secondary info-profile">12:00</div>
-            </div>
-            <div class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3">
-              <div class="d-flex">
-                <img class="avatar" src="img/avatar_6.jpg" alt="" />
-                <div class="ps-4">
-                  <div>Claudia</div>
-                  <div class="text-secondary info-profile">
-                    Ultimo messaggio inviato
-                  </div>
-                </div>
-              </div>
-              <div class="text-secondary info-profile">12:00</div>
-            </div>
-            <div class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3">
-              <div class="d-flex">
-                <img class="avatar" src="img/avatar_7.jpg" alt="" />
-                <div class="ps-4">
-                  <div>Federico</div>
-                  <div class="text-secondary info-profile">
-                    Ultimo messaggio inviato
-                  </div>
-                </div>
-              </div>
-              <div class="text-secondary info-profile">12:00</div>
-            </div>
-            <div class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3">
-              <div class="d-flex">
-                <img class="avatar" src="img/avatar_8.jpg" alt="" />
-                <div class="ps-4">
-                  <div>Davide</div>
+                  <div>{{singleContact.name}}</div>
                   <div class="text-secondary info-profile">
                     Ultimo messaggio inviato
                   </div>
@@ -235,7 +157,7 @@
               </div>
             </div>
             <div class="d-flex">
-              <div class="send message">
+              <div class="sent message">
                 Tutto fatto!
                 <div class="time">16:15</div>
               </div>

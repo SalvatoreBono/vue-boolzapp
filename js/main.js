@@ -71,7 +71,7 @@ createApp({
                 },
                 {
                     name: "Luisa",
-                    avatar: "_4",
+                    avatar: "_6",
                     messages: [
                         {
                             date: "10/01/2020 15:30:55",
