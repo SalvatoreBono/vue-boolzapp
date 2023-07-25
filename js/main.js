@@ -97,21 +97,42 @@ createApp({
     },
     methods: {
         currentContact(singleContact) {
+            //contact contiene il singolo oggetto cliccato
             this.contact = singleContact;
         },
+
         sendMessage() {
+            /* creo il clone */
             const myMessageClone = { ...this.myMessage };
+
+            /* specifico lo status */
             myMessageClone.status = `sent`;
+
+            /* pusho il messaggio nel contact.messages */
             this.contact.messages.push(myMessageClone);
+
+            /* faccio si che la funzione "messageOK" venga eseguita 1s dopo l'invio del messaggio utente */
             setTimeout(this.messageOK, 1000);
         },
+
         messageOK() {
+
+            /* creo il clone */
             const myMessageClone = { ...this.myMessage };
+
+            /* specifico lo status */
             myMessageClone.status = `received`;
+
+            /* specifico il messaggio che voglio ricevere */
             myMessageClone.message = `Ok`;
+
+            /* pusho il messaggio nel contact.messages */
             this.contact.messages.push(myMessageClone);
         }
     },
+
+    /* Quando Vue legge l'html e cerca di accedere alla variabile "contact", siccome questa è null, avremo un errore. Allora, Prima che Vue legga l'HTML, assegniamo un valore iniziale alla variabile contact. 
+    L'evento "beforeMount" viene eseguito esattamente prima che l'html venga gestito da Vue.  */
     beforeMount() {
         this.contact = this.contatti[0];
     },

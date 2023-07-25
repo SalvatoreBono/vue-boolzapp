@@ -96,6 +96,7 @@
               v-for="singleContact in contatti"
               class="d-flex justify-content-between hover-bg-grey pt-2 pb-2 pe-3 ps-3"
             >
+              <!-- al click prendi il singolo oggetto cliccato  -->
               <div @click="currentContact(singleContact)" class="d-flex">
                 <!-- ciclo le img -->
                 <img
@@ -120,12 +121,14 @@
             class="d-flex justify-content-between pt-2 pb-2 pe-3 ps-3 bg-profile"
           >
             <div class="d-flex">
+              <!-- cicla le singola img selezionata -->
               <img
                 class="avatar"
                 :src="`img/avatar${contact.avatar}.jpg`"
                 alt=""
               />
               <div class="ps-4">
+                <!-- cicla il singolo nome selezionato -->
                 <div>{{contact.name}}</div>
                 <div class="text-secondary info-profile">
                   Ultimo accesso oggi alle 12:00
@@ -150,11 +153,12 @@
           <div
             class="overflow-auto flex-column p-5 flex-grow-1 d-flex message-area"
           >
-            <!-- ciclo i singoli messaggi  -->
+            <!-- cicla i singoli messaggi cliccati  -->
             <div
               v-for="singleMessage in contact.messages"
               class="d-flex justify-content-end"
             >
+              <!--Se "singleMessage.status" === è uguale allo status "received" dai la classe `received` altrimenti `sent`"  -->
               <div
                 :class="singleMessage.status === `received` ? `received` : `sent`"
                 class="message"
