@@ -50,8 +50,10 @@ body {
 }
 
 .received {
-    background-color: rgb(213, 249, 186);
-    margin-right: 25px;
+    margin-right: auto;
+    background-color: white;
+
+    margin-left: 25px;
 }
 
 .time {
@@ -71,8 +73,10 @@ body {
 }
 
 .sent {
-    background-color: white;
-    margin-left: 25px;
+    background-color: rgb(213, 249, 186);
+    margin-right: 25px;
+
+
 
 }
 

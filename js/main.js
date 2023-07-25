@@ -86,10 +86,34 @@ createApp({
                     ],
                 },
             ],
-
+            contact: null,
+            myMessage: [
+                {
+                    message: ``,
+                    status: ``,
+                }
+            ],
         };
     },
     methods: {
-
+        currentContact(singleContact) {
+            this.contact = singleContact;
+        },
+        sendMessage() {
+            const myMessageClone = { ...this.myMessage };
+            myMessageClone.status = `sent`;
+            this.contact.messages.push(myMessageClone);
+            setTimeout(this.messageOK, 1000);
+        },
+        messageOK() {
+            const myMessageClone = { ...this.myMessage };
+            myMessageClone.status = `received`;
+            myMessageClone.message = `Ok`;
+            this.contact.messages.push(myMessageClone);
+        }
     },
+    beforeMount() {
+        this.contact = this.contatti[0];
+    },
+
 }).mount('#app');
