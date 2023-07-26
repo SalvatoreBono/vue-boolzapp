@@ -83,6 +83,7 @@
                 type="text"
                 class="form-control"
                 id="floatingInputGroup1"
+                v-model="search"
                 placeholder="Cerca o inizia una nuova chat"
               />
               <label for="floatingInputGroup1"
@@ -93,7 +94,7 @@
           <div class="overflow-auto flex-grow-1 flex-column">
             <!-- Ciclare i contatti con il v-for -->
             <div
-              v-for="singleContact in contatti"
+              v-for="singleContact in filteredContact"
               class="d-flex justify-content-between hover-bg-grey pt-2 pb-2 pe-3 ps-3"
             >
               <!-- al click prendi il singolo oggetto cliccato  -->

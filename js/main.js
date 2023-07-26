@@ -93,6 +93,7 @@ createApp({
                     status: ``,
                 }
             ],
+            search: ``,
         };
     },
     methods: {
@@ -128,9 +129,15 @@ createApp({
 
             /* pusho il messaggio nel contact.messages */
             this.contact.messages.push(myMessageClone);
+        },
+    },
+    computed: {
+        filteredContact() {
+            return this.contatti.filter(singleContact => {
+                return singleContact.name.toLowerCase().includes(this.search.toLowerCase())
+            })
         }
     },
-
     /* Quando Vue legge l'html e cerca di accedere alla variabile "contact", siccome questa è null, avremo un errore. Allora, Prima che Vue legga l'HTML, assegniamo un valore iniziale alla variabile contact. 
     L'evento "beforeMount" viene eseguito esattamente prima che l'html venga gestito da Vue.  */
     beforeMount() {
